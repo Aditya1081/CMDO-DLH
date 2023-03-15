@@ -18,7 +18,7 @@
         <!--Alat-->
         <li>
           <!-- Alat -->
-          <a href="{{route('alat.view')}}">>
+          <a href="{{route('alat.view')}}">
             <i class="bi bi-circle"></i><span>Alat</span>
           </a>
           <!-- Spesifikasi Alat  -->
