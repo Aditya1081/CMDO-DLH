@@ -10,11 +10,12 @@
               <h5 class="card-title">Edit Data Alat</h5>
 
               <!-- General Form Elements -->
-              <form>
+              <form action="{{route('alat.update', $editData->id)}}" method="post">
+              @csrf
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Nama Alat</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="NamaAlat" class="form-control">
                   </div>
                 </div>
 
