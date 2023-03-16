@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AlatController extends Controller
+class spekAlatController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('Alat.alat_view');
+        //
     }
 
     /**
@@ -19,7 +19,7 @@ class AlatController extends Controller
      */
     public function create()
     {
-        return view('Alat.alat_add');
+        //
     }
 
     /**
@@ -41,9 +41,9 @@ class AlatController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit() //string $id
+    public function edit(string $id)
     {
-        return view('Alat.alat_edit');
+        //
     }
 
     /**
