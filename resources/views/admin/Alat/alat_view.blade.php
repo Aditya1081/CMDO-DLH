@@ -30,7 +30,7 @@
                     <td>{{$alat->NamaAlat}}</td>
                     <td>
 						      	<a href="{{route('alat.edit', $alat->id)}}" class="bi bi-pencil-fill marginalat" style="font-size: 21px"></a>
-                    <a href="" id="delete" class="bi bi-trash-fill marginalat" style="font-size: 21px"></a>
+                    <a href="{{route('alat.delete', $alat->id)}}" class="bi bi-trash-fill marginalat" style="font-size: 21px"></a>
                     </td>
                   </tr>
                   @endforeach   
