@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -22,11 +22,11 @@
             <i class="bi bi-circle"></i><span>Alat</span>
           </a>
           <!-- Spesifikasi Alat  -->
-          <a href="components-tooltips.html">
+          <a href="{{route('spekalat.view')}}">
             <i class="bi bi-circle"></i><span>Spesifikasi Alat</span>
           </a>
           <!-- Detail Alat -->
-          <a href="components-tooltips.html">
+          <a href="{{route('detailalat.view')}}">
             <i class="bi bi-circle"></i><span>Detail Alat</span>
           </a>
           </li>

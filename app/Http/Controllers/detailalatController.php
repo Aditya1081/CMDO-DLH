@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AlatController extends Controller
+class detailalatController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.Alat.alat_view');
+        return view('admin.detailalat.detailalat_view');
+    }
+
+    public function indexdetail()
+    {
+        return view('admin.detailalat.detailalat_detail');
     }
 
     /**
@@ -19,7 +25,7 @@ class AlatController extends Controller
      */
     public function create()
     {
-        return view('admin.Alat.alat_add');
+        return view('admin.detailalat.detailalat_add');
     }
 
     /**
@@ -43,7 +49,7 @@ class AlatController extends Controller
      */
     public function edit() //string $id
     {
-        return view('admin.Alat.alat_edit');
+        return view('admin.detailalat.detailalat_edit');
     }
 
     /**

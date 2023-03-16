@@ -7,7 +7,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Datatables</h5>
+              <h5 class="card-title">Data Alat</h5>
                 <a href="{{route('alat.add')}}">
                   <i class="bi bi-plus-circle-fill marginalat" style="font-size: 22px;"></i>
                 </a>
@@ -27,11 +27,10 @@
                   <tr>
                     <td>1</td>
                     <td>Bradon Jacob</td>
-                     <td>
-                    <a href="" class="bi bi-eye-fill marginalat" style="font-size: 22px"></a>
-						      		<a href="{{route('alat.edit')}}" id="delete" class="bi bi-pencil-fill marginalat" style="font-size: 21px"></a>
-                      <a href="" id="delete" class="bi bi-trash-fill marginalat" style="font-size: 21px"></a>
-                      </td>
+                    <td>
+						      	<a href="{{route('alat.edit')}}" id="delete" class="bi bi-pencil-fill marginalat" style="font-size: 21px"></a>
+                    <a href="" id="delete" class="bi bi-trash-fill marginalat" style="font-size: 21px"></a>
+                    </td>
                   </tr>
 
                       
