@@ -5,6 +5,8 @@ use App\Http\Controllers\AlatController;
 use App\Http\Controllers\spekalatController;
 use App\Http\Controllers\detailalatController;
 
+use App\Models\Alat;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,9 +26,10 @@ Route::get('/', function () {
 Route::prefix('alat')->group(function(){
     Route::get('/index', [AlatController::class,'index'])->name('alat.view');
     Route::get('/add', [AlatController::class,'create'])->name('alat.add');
-    // Route::post('/store', [FilmController::class,'FilmStore'])->name('film.store');
-    Route::get('/edit', [AlatController::class,'edit'])->name('alat.edit');
-    // Route::post('/update/{id}', [FilmController::class,'FilmUpdate'])->name('Film.update');
+    Route::post('/store', [AlatController::class,'store'])->name('alat.store');
+    Route::get('/edit/{id}', [AlatController::class,'edit'])->name('alat.edit');
+    Route::post('/update/{id}', [AlatController::class,'update'])->name('alat.update');
+    Route::get('/delete/{id}', [AlatController::class,'delete'])->name('alat.delete');
 });
 Route::prefix('spekalat')->group(function(){
     Route::get('/index', [spekalatController::class,'index'])->name('spekalat.view');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Alat;
 
 class AlatController extends Controller
 {
@@ -11,7 +12,8 @@ class AlatController extends Controller
      */
     public function index()
     {
-        return view('admin.Alat.alat_view');
+        $data['allDataAlat']=Alat::all();
+        return view('admin.Alat.alat_view', $data);
     }
 
     /**
@@ -27,7 +29,20 @@ class AlatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData= $request->validate([
+               'NamaAlat'=> 'required',    
+     
+           ]);
+         
+           $data = new Alat();
+           $data->NamaAlat=$request->NamaAlat;
+           
+        
+           $data->save();
+       
+       
+           
+           return redirect()->route('alat.view')->with('info','Tambah Alat berhasil');
     }
 
     /**
@@ -41,24 +56,42 @@ class AlatController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit() //string $id
+    public function edit($id) //string $id
     {
-        return view('admin.Alat.alat_edit');
+        $editData= Alat::find($id);
+        return view('admin.Alat.alat_edit', compact('editData'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    
+    public function update(Request $request, $id)
     {
-        //
+        $validateData= $request->validate([
+                'NamaAlat'=> 'required',
+
+           ]);
+         
+           $data= Alat::find($id);
+           $data->NamaAlat=$request->NamaAlat;
+           
+        
+           $data->save();
+       
+       
+           
+           return redirect()->route('alat.view')->with('info','Tambah Alat berhasil');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete($id)
     {
-        //
+        $deleteData= Alat::find($id);
+        $deleteData->delete();
+
+        return redirect()->route('alat.view')->with('info','Delete Data berhasil');
     }
 }
