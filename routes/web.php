@@ -6,6 +6,7 @@ use App\Http\Controllers\spekalatController;
 use App\Http\Controllers\detailalatController;
 
 use App\Models\Alat;
+use App\Models\SpekAlat;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,15 +35,16 @@ Route::prefix('alat')->group(function(){
 Route::prefix('spekalat')->group(function(){
     Route::get('/index', [spekalatController::class,'index'])->name('spekalat.view');
     Route::get('/add', [spekalatController::class,'create'])->name('spekalat.add');
-    // Route::post('/store', [FilmController::class,'FilmStore'])->name('film.store');
-    Route::get('/edit', [spekalatController::class,'edit'])->name('spekalat.edit');
-    // Route::post('/update/{id}', [FilmController::class,'FilmUpdate'])->name('Film.update');
+    Route::post('/store', [spekalatController::class,'store'])->name('spekalat.store');
+    Route::get('/edit/{id}', [spekalatController::class,'edit'])->name('spekalat.edit');
+    Route::post('/update/{id}', [spekalatController::class,'update'])->name('spekalat.update');
+    Route::post('/delete/{id}', [spekalatController::class,'delete'])->name('spekalat.delete');
 });
 Route::prefix('detailalat')->group(function(){
     Route::get('/index', [detailalatController::class,'index'])->name('detailalat.view');
     Route::get('/indexdetail', [detailalatController::class,'indexdetail'])->name('detailalat.detail');
     Route::get('/add', [detailalatController::class,'create'])->name('detailalat.add');
     // Route::post('/store', [FilmController::class,'FilmStore'])->name('film.store');
-    Route::get('/edit', [detailalatController::class,'edit'])->name('detailalat.edit');
+    Route::get('/edit/{id}', [detailalatController::class,'edit'])->name('detailalat.edit');
     // Route::post('/update/{id}', [FilmController::class,'FilmUpdate'])->name('Film.update');
 });

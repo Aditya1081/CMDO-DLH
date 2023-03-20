@@ -18,7 +18,7 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">No</th>
                     <th scope="col">Kode Alat</th>
                     <th scope="col">Nama Alat</th>
                     <th scope="col">Brand</th>
@@ -28,20 +28,20 @@
                   </tr>
                 </thead>
                 <tbody>
+                @foreach($allDataSpekAlat as $spekalat)
                   <tr>
-                    <td>1</td>
-                    <td>S11</td>
+                    <th scope="row">{{$spekalat->id}}</td>
+                    <td>{{$spekalat->KodeAlat}}</td>
                     <td>Termometer</td>
-                    <td>Samsung</td>
-                    <td>M_1_PI</td>
-                    <td>M_2_PI</td>
+                    <td>{{$spekalat->Brand}}</td>
+                    <td>{{$spekalat->Model}}</td>
+                    <td>{{$spekalat->NoSeri}}</td>
                     <td>
-						      	<a href="{{route('spekalat.edit')}}" id="delete" class="bi bi-pencil-fill marginalat" style="font-size: 21px"></a>
-                    <a href="" id="delete" class="bi bi-trash-fill marginalat" style="font-size: 21px"></a>
+						      	<a href="{{route('spekalat.edit', $spekalat->id)}}" id="delete" class="bi bi-pencil-fill marginalat" style="font-size: 21px"></a>
+                    <a href="{{route('spekalat.delete', $spekalat->id)}}" id="delete" class="bi bi-trash-fill marginalat" style="font-size: 21px"></a>
                     </td>
                   </tr>
-
-                      
+                  @endforeach   
                 </tbody>
               </table>
            
