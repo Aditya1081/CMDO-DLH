@@ -10,37 +10,34 @@
               <h5 class="card-title">Tambah Spesifikasi Alat</h5>
 
               <!-- General Form Elements -->
-              <form>
+              <form action="{{route('spekalat.store')}}" method="post">
+              @csrf
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Kode Alat</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="KodeAlat" class="form-control">
                   </div>
                 </div>
-                <div class="row mb-3">
+                <!-- <div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Nama Alat</label>
                   <div class="col-sm-9">
                     <input type="text" class="form-control">
                   </div>
-                </div><div class="row mb-3">
+                </div> -->
+                <div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Brand</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="Brand" class="form-control">
                   </div>
                   </div><div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Model</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="Model" class="form-control">
                   </div>
                 </div><div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Nomer Seri</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
-                  </div>
-                </div><div class="row mb-3">
-                  <label for="inputText" class="col-sm-3 col-form-label">Aksi</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="NoSeri" class="form-control">
                   </div>
                 </div>
                 <div class="row mb-3">
