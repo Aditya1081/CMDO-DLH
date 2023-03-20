@@ -14,4 +14,9 @@ class Alat extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['id','NamaAlat'];
     protected $hidden = [];
+
+    public function speakalat()
+    {
+        return $this->hasMany(SpeakAlat::class);
+    }
 }

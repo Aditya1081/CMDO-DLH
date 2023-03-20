@@ -32,7 +32,7 @@
                   <tr>
                     <th scope="row">{{$spekalat->id}}</td>
                     <td>{{$spekalat->KodeAlat}}</td>
-                    <td>Termometer</td>
+                    <td>{{$spekalat->alat_id}}</td>
                     <td>{{$spekalat->Brand}}</td>
                     <td>{{$spekalat->Model}}</td>
                     <td>{{$spekalat->NoSeri}}</td>
