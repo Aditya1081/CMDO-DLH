@@ -11,9 +11,9 @@
                 <a href="{{route('spekalat.add')}}">
                   <i class="bi bi-plus-circle-fill marginalat" style="font-size: 22px;"></i>
                 </a>
-                <a href="">
+                <!-- <a href="">
                   <i class="bi bi-printer-fill" style="font-size: 22px"></i>
-                </a>
+                </a> -->
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
