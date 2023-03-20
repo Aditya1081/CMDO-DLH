@@ -12,6 +12,11 @@ class SpekAlat extends Model
 
     protected $table = 'spek_alats';
     protected $primaryKey = 'id';
-    protected $fillable = ['id','KodeAlat','Brand','Model','NoSeri'];
+    protected $fillable = ['id','Alat_id','KodeAlat','Brand','Model','NoSeri'];
     protected $hidden = [];
+
+    public function alat()
+    {
+        return $this->belongsTo(Alat::class);
+    }
 }
