@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('spek_alats', function (Blueprint $table) {
             $table->id();
-            $table->int('KodeAlat');
+            $table->integer('KodeAlat');
             $table->string('Brand');
             $table->string('Model');
             $table->string('NoSeri');
