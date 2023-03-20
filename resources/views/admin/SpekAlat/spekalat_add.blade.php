@@ -18,12 +18,17 @@
                     <input type="text" name="KodeAlat" class="form-control">
                   </div>
                 </div>
-                <!-- <div class="row mb-3">
-                  <label for="inputText" class="col-sm-3 col-form-label">Nama Alat</label>
+                 <div class="row mb-3">
+                  <label class="col-sm-3 col-form-label">Pilih Alat</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <select class="form-select" aria-label="Default select example" name="alat_id" id="alat_id">
+                      <option disable value>Nama Alat</option>
+                      @foreach ($alat as $alats)
+                        <option value="{{$alats->id}}">{{$alats->NamaAlat}}</option>
+                      @endforeach
+                    </select>
                   </div>
-                </div> -->
+                </div>
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Brand</label>
                   <div class="col-sm-9">
@@ -42,7 +47,7 @@
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label"></label>
-                  <div class="col-sm-10">
+                  <div class="col-sm-11">
                     <button type="submit" class="btn btn-primary" style="margin-left: 285px;">Simpan</button>
                   </div>
                 </div>

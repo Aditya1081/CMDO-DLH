@@ -12,12 +12,8 @@ class detailalatController extends Controller
      */
     public function index()
     {
+        
         return view('admin.detailalat.detailalat_view');
-    }
-
-    public function indexdetail()
-    {
-        return view('admin.detailalat.detailalat_detail');
     }
 
     /**

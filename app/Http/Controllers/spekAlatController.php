@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SpekAlat;
+use App\Models\Alat;
 
 class spekalatController extends Controller
 {
@@ -12,7 +13,7 @@ class spekalatController extends Controller
      */
     public function index()
     {
-        $data['allDataSpekAlat']=SpekAlat::all();
+        $data['allDataSpekAlat']=SpekAlat::with('alat')->get();
         return view('admin.spekalat.spekalat_view', $data);
     }
 
@@ -21,7 +22,8 @@ class spekalatController extends Controller
      */
     public function create()
     {
-        return view('admin.spekalat.spekalat_add');
+        $alat =Alat::all();
+        return view('admin.spekalat.spekalat_add', compact('alat'));
     }
 
     /**
@@ -31,6 +33,7 @@ class spekalatController extends Controller
     {
         $validateData= $request->validate([
                'KodeAlat'=> 'required',
+               'alat_id'=> 'required',
                'Brand'=> 'required', 
                'Model'=> 'required',
                'NoSeri'=> 'required' 
@@ -38,6 +41,7 @@ class spekalatController extends Controller
          
            $data = new SpekAlat();
            $data->KodeAlat=$request->KodeAlat;
+           $data->alat_id=$request->alat_id;
            $data->Brand=$request->Brand;
            $data->Model=$request->Model;
            $data->NoSeri=$request->NoSeri;
@@ -63,8 +67,9 @@ class spekalatController extends Controller
      */
     public function edit($id) //string $id
     {
-        $editData= SpekAlat::find($id);
-        return view('admin.spekalat.spekalat_edit', compact('editData'));
+        $alat= Alat::all();
+        $editData= SpekAlat::with('alat')->findorfail($id);
+        return view('admin.spekalat.spekalat_edit', compact('editData','alat'));
     }
 
     /**
@@ -74,6 +79,7 @@ class spekalatController extends Controller
     {
         $validateData= $request->validate([
                'KodeAlat' => 'required', 
+               'alat_id'=> 'required',
                'Brand'=> 'required',
                'Model' => 'required',
                'NoSeri' => 'required'        
@@ -82,6 +88,7 @@ class spekalatController extends Controller
          
            $data=SpekAlat::find($id);
            $data->KodeAlat=$request->KodeAlat;
+           $data->alat_id=$request->alat_id;
            $data->Brand=$request->Brand;
            $data->Model=$request->Model;
            $data->NoSeri=$request->NoSeri;
