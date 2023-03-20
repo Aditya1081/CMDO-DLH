@@ -44,7 +44,7 @@ Route::prefix('detailalat')->group(function(){
     Route::get('/index', [detailalatController::class,'index'])->name('detailalat.view');
     Route::get('/indexdetail', [detailalatController::class,'indexdetail'])->name('detailalat.detail');
     Route::get('/add', [detailalatController::class,'create'])->name('detailalat.add');
-    // Route::post('/store', [FilmController::class,'FilmStore'])->name('film.store');
-    Route::get('/edit/{id}', [detailalatController::class,'edit'])->name('detailalat.edit');
+    // Route::post('/store', [FilmController::class,'FilmStore'])->name('film.store');  /{id}
+    Route::get('/edit', [detailalatController::class,'edit'])->name('detailalat.edit');
     // Route::post('/update/{id}', [FilmController::class,'FilmUpdate'])->name('Film.update');
 });
