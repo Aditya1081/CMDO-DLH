@@ -14,29 +14,29 @@
               <div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Kode Alat</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="KodeAlat" value="{{$editData->KodeAlat}}" class="form-control">
                   </div>
                 </div>
-                <div class="row mb-3">
+                <!-- <div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Nama Alat</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="NamaAlat" value="{{$editData->NamaAlat}}" class="form-control">
                   </div>
-                </div>
+                </div> -->
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Brand</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="Brand" value="{{$editData->Brand}}" class="form-control">
                   </div>
                 </div><div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Model</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="Model" value="{{$editData->Model}}" class="form-control">
                   </div>
                 </div><div class="row mb-3">
                   <label for="inputText" class="col-sm-3 col-form-label">Nomer Seri</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control">
+                    <input type="text" name="NoSeri" value="{{$editData->NoSeri}}" class="form-control">
                   </div>
                 </div>
 
