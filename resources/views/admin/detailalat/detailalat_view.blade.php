@@ -18,7 +18,7 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">No</th>
                     <th scope="col">Kode Alat</th>
                     <th scope="col">Nama Alat</th>
                     <th scope="col">Brand</th>
@@ -35,7 +35,7 @@
                     <td>M_1_PI</td>
                     <td>
                     <a href="{{route('detailalat.detail')}}" class="bi bi-eye-fill marginalat" style="font-size: 22px"></a>
-						      	<a href="{{route('detailalat.edit')}}" id="delete" class="bi bi-pencil-fill marginalat" style="font-size: 21px"></a>
+						      	<a href="{{route('detailalat.edit')}}" class="bi bi-pencil-fill marginalat" style="font-size: 21px"></a>
                     <a href="" id="delete" class="bi bi-trash-fill marginalat" style="font-size: 21px"></a>
                     </td>
                   </tr>
